@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source env.sh
 
 ulimit -s unlimited
