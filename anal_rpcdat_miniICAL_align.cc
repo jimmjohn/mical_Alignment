@@ -4840,7 +4840,7 @@ TH2F* sel_theta_phi_16[10][16];
   //strncpy(outfilx, rootfiles, len-4);
   strncpy(outfilx, argv[1], len-4);
   outfilx[len-4]='\0';
-  sprintf(outfilx, "%s_miical_jj1_", outfilx); //jim jim change  need to add substring
+  sprintf(outfilx, "%s_miical_jj1_", outfilx); //jim jim change  need to add strncpy
   len = strlen(outfilx);
   outfilx[len]='\0';
 
