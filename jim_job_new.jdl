@@ -1,0 +1,43 @@
+
+initialdir = /home/jim/Documents/mical_mdri
+
+Universe   = vanilla
+notify_user = jimmjohn007@gmail.com
+
+Log        = condorOutput/jobjim_$(Cluster).$(Process).log
+Output     = condorOutput/jobjim_$(Cluster).$(Process).out
+Error      = condorOutput/jobjim_$(Cluster).$(Process).err
+
+Executable = jim_jobwrapper_new.sh
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files = madurai_rpcdata_10l, fileout_noband_20181226_jj161.root, pos_time_inuse_madurai64_26dec2018.txt, RPC155_CorX_L8_HV_9p4kV.root, time_corr_miniical_20181226_jj160.txt, runFiles, env.sh
+transfer_output_files = fileOut
+
+queue arguments from (
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181211_084815.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181211_095255.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181211_140112.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181211_150352.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181212_083311.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181213_082631.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181213_101609.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181214_082706.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181217_093900.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181217_112935.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181217_141614.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181218_082256.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181219_091411.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181221_085429.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181224_115834.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181225_101946.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181225_111638.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181226_101038.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181226_105715.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181227_095851.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181227_144154.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181228_100653.log 0 5
+/home/jim/Documents/mical_mdri/runFiles/magfield_log/RPCv4t_evtraw-20181228_102627.log 0 5
+)
